@@ -28,7 +28,7 @@ int main()
 	}
 	
 	printf("The tree is : ");
-	preorderMorris(root);
+	inorder(root);
 	return 0;
 }
 
@@ -64,6 +64,16 @@ Node *createTree(Node *root,int data)
 		par->right=tmp;
 		return root;
 	}
+}
+
+void inorder(struct node *root)
+{
+	struct node *ptr=root;
+	if(ptr==NULL) return ;
+	
+	inorder(ptr->left);
+	printf("%d ",ptr->data);
+	inorder(ptr->right);
 }
 
 Node *treeToDoubly(Node *root)
