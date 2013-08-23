@@ -48,7 +48,7 @@ int _count(struct node *start)
     return cnt;
 }
 
-// following function will connect the link-list alternatively
+// following function will check for intersection of linked list
 
 int intersect(struct node *start1,struct node *start2)
 {
